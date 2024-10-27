@@ -1,0 +1,41 @@
+
+class Base
+    vars id
+    method showid()
+    vars x
+    begin
+        self.id = 10
+        x = self.id
+        io.print(x)
+        x = 0
+        return x
+    end-method
+end-class
+class Pessoa
+    vars num
+    method calc(x)
+    vars y, z
+    begin
+        z = self.num
+        y = x + z
+        io.print(y)
+        y = new Base
+        return y
+    end-method
+end-class
+main()
+vars p, b, x
+begin
+    b = new Base
+    p = new Pessoa
+    p._prototype = b
+    b.id = 111
+    p.num = 123
+    p.id = 321
+    x = 1024
+    if x gt a then
+    p.showid(a,b,d)
+    else
+    p.calc(x)
+    end-if
+end;

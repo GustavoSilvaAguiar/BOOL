@@ -1,0 +1,83 @@
+
+class Base
+    vars id
+    method showid()
+    vars x
+    begin
+        const 10
+        load self
+        set id
+        load self
+        get id
+        store x
+        load x
+        load io
+        call print
+        pop
+        const 0
+        store x
+        load x
+        ret
+    end-method
+end-class
+class Pessoa
+    vars num
+    method calc(x)
+    vars y, z
+    begin
+        load self
+        get num
+        store z
+        load x
+        load z
+        add
+        store y
+        load y
+        load io
+        call print
+        pop
+        new Base
+        store y
+        load y
+        ret
+    end-method
+end-class
+main()
+vars p, b, x
+begin
+    new Base
+    store b
+    new Pessoa
+    store p
+    load p
+    set _prototype
+    const 111
+    load b
+    set id
+    const 123
+    load p
+    set num
+    const 321
+    load p
+    set id
+    const 1024
+    store x
+    load x
+    load a
+    gt
+    if 6
+
+    load a
+    load b
+    load d
+    load p
+    call showid
+    pop
+    else 4
+
+    load x
+    load p
+    call calc
+    pop
+    end-if
+end;
